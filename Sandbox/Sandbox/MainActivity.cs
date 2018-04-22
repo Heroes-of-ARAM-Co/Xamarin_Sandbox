@@ -9,7 +9,10 @@ namespace Sandbox
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
-            base.OnCreate(savedInstanceState);
+            Button button1 = FindViewById<Button>(Resource.Id.button1);
+        
+            
+            
 
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
