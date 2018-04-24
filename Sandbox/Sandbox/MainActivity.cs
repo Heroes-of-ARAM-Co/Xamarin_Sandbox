@@ -48,6 +48,7 @@ namespace Sandbox
             {
                 // Translate user's alphanumeric phone number to numeric
                 string translatedNumber = Core.DemaciaFucker.ToBattle();
+
                 demaciaText.Text = translatedNumber;
             };
 
