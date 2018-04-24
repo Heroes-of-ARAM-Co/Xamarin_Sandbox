@@ -59,6 +59,9 @@ namespace Sandbox
 			// aapt resource value: 0x7f040003
 			public const int TranslatedPhoneWord = 2130968579;
 			
+			// aapt resource value: 0x7f040006
+			public const int TranslationHistoryButton = 2130968582;
+			
 			// aapt resource value: 0x7f040000
 			public const int textView1 = 2130968576;
 			
@@ -91,8 +94,11 @@ namespace Sandbox
 		public partial class String
 		{
 			
+			// aapt resource value: 0x7f030001
+			public const int app_name = 2130903041;
+			
 			// aapt resource value: 0x7f030000
-			public const int app_name = 2130903040;
+			public const int translationHistory = 2130903040;
 			
 			static String()
 			{
