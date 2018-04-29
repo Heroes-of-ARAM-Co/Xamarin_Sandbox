@@ -23,21 +23,22 @@ namespace Sandbox
         public QueryFormer(Sandbox.Models.RoomModel roomQuery)
         {
             DbConnection();
-            QueryFile(roomQuery);
+          //  QueryFile(roomQuery);
             QueryDbSender(roomQuery);
 
         }
         public QueryFormer(Sandbox.Models.ObjectModel objectQuery )
         {
             DbConnection();
-            QueryFile(objectQuery);
-            QueryDbSender(objectQuery);
+       //     QueryFile(objectQuery);
+        QueryDbSender(objectQuery);
         }
         private void QueryFile(dynamic modelInput)
         {
-          string serializedObject = Newtonsoft.Json.JsonConvert.SerializeObject(modelInput);
+            var path = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "garen.json");
+            string serializedObject = Newtonsoft.Json.JsonConvert.SerializeObject(modelInput);
 
-            using (StreamWriter file = File.CreateText(@"path:/test/garen.json"))
+            using (StreamWriter file = File.CreateText(path))
             {
                 JsonSerializer serializer = new JsonSerializer();
                 serializer.Serialize(file, modelInput);
@@ -53,7 +54,7 @@ namespace Sandbox
         }
         private void DbConnection() { 
 
-          client = new MongoClient("mongodb://192.168.47.37:27017");
+          client = new MongoClient("mongodb://127.0.0.1:27017");
           db = client.GetDatabase("testowa_apki");
     
             }

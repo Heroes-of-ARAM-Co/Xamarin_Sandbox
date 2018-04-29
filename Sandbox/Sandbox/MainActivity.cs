@@ -31,7 +31,7 @@ namespace Sandbox
             {
                 Sandbox.Models.RoomModel emptyModel = new Models.RoomModel();
                 QueryFormer smthRoom  = new QueryFormer(emptyModel);
-                QueryFormer smthObject = new QueryFormer(emptyModel.objectsInRoom.First());
+          
 
               
             };
